@@ -58,17 +58,7 @@ const readActiveUser = () => {
         return null;
     }
 
-    const users = loadUsers();
-
-    const user = users.find((user: UserType) => {
-        return user.name == name;
-    })
-
-    if(user) {
-        return user;
-    }
-
-    return null;
+    return reducer(null, {name})
 }
 
 function App() {
